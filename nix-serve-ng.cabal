@@ -21,13 +21,13 @@ executable nix-serve
 
     -- https://nixos.org/manual/nix/stable/installation/supported-platforms.html
     if arch(x86_64) && os(linux)
-      cxx-options:    -DSYSTEM="x86_64-linux"
+      cxx-options:    -DSYSTEM="x86_64-linux" -std=c++20
     elif arch(aarch64) && os(linux)
-      cxx-options:    -DSYSTEM="aarch64-linux"
+      cxx-options:    -DSYSTEM="aarch64-linux" -std=c++20
     elif arch(aarch64) && os(darwin)
-      cxx-options:    -DSYSTEM="aarch64-darwin"
+      cxx-options:    -DSYSTEM="aarch64-darwin" -std=c++20
     elif arch(x86_64) && os(darwin)
-      cxx-options:    -DSYSTEM="x86_64-darwin"
+      cxx-options:    -DSYSTEM="x86_64-darwin" -std=c++20
     else
       buildable:      False
 
